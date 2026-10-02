@@ -1,0 +1,44 @@
+/* 1. External imports MUST be at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Antic+Didone&display=swap');
+
+/* 2. Tailwind imports */
+@import "tailwindcss";
+
+/* 3. Theme overrides */
+@theme {
+  --color-dusty-mauve: #A25354;
+  --color-faded-copper: #9A7651;
+  --color-dark-coffee: #492E1F;
+  --color-saddle-brown: #844D33;
+  --color-deep-walnut: #56412D;
+  --color-pale-oak: #E8CFAC;
+  --color-tan: #CBAE86;
+  --color-dark-spruce: #38472B;
+
+  --font-abril: "Abril Fatface", serif;
+  --font-antic: "Antic Didone", serif;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark-coffee);
+}
+@keyframes botanical-breathe {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1); 
+  }
+  33% { 
+    transform: rotate(4deg) scale(1.08); 
+  }
+  66% { 
+    transform: rotate(-2deg) scale(1.04); 
+  }
+}
+
+.animate-botanical {
+  animation: botanical-breathe 12s ease-in-out infinite;
+  will-change: transform;
+}
